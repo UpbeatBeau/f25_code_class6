@@ -823,10 +823,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ac42bd393bcff46af96a6b03d23894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  textstack: {fileID: 0}
-  textqueue: {fileID: 0}
-  interactstack: {fileID: 0}
-  interactqueue: {fileID: 0}
+  textstack: {fileID: 458204988}
+  textqueue: {fileID: 1501732425}
+  interactstack: {fileID: 137921852675350954, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  interactqueue: {fileID: 7893008723155328913, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
 --- !u!4 &1593927707
 Transform:
   m_ObjectHideFlags: 0

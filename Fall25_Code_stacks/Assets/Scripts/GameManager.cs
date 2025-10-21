@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
         }
 
         //printing number of things in stack
-        Debug.Log(foodstack.Count);
+        //Debug.Log(foodstack.Count);
 
         //for loop adding strings from a list
         for(int i = 0;i < foodlist.Count; i++)
@@ -58,9 +58,9 @@ public class GameManager : MonoBehaviour
         }
 
         //printing number of things in stack
-        Debug.Log(liststack.Count);
+        //Debug.Log(liststack.Count);
         //printing the first out of the stack
-        Debug.Log(liststack.Pop());
+        //Debug.Log(liststack.Pop());
 
         //foreach loop using the array to make a queue
         foreach (string s in food)
@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
             foodqueue.Enqueue(s);
         }
         //print the number of strings in the queue
-        Debug.Log(foodqueue.Count);
+        //Debug.Log(foodqueue.Count);
 
         //foreach loop using the list to make a queue
         foreach (string s in foodlist)
@@ -77,14 +77,23 @@ public class GameManager : MonoBehaviour
         }
 
         //print the number of strings in the queue
-        Debug.Log(listqueue.Count);
+        //Debug.Log(listqueue.Count);
         //print the first out of the queu
-        Debug.Log(listqueue.Dequeue());
+        //Debug.Log(listqueue.Dequeue());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (interactstack.action.WasPressedThisFrame() && foodstack.Count > 0)
+        {
+            textstack.text = foodstack.Pop();
+        }
+
+        if (interactqueue.action.WasPressedThisFrame() && foodqueue.Count > 0) 
+        {
+            textqueue.text = foodqueue.Dequeue();
+        }
+
     }
 }
